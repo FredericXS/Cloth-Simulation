@@ -99,6 +99,9 @@ int main() {
             handle_mouse_click(&event, constraints, total_constraints);
         }
 
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+        SDL_RenderClear(renderer);
+
         // Applying gravity, checking collisions and drawing particles as points
         for (int i = 0; i < total_particles; i++) {
             Particle *particle = &particles[i];
